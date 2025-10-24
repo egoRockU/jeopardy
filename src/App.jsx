@@ -2,15 +2,18 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import categories from './data/items.json'
 
 function App() {
-  const [count, setCount] = useState(0)
-  
   // Add react-card-flip library for flipping cards
+  
+  console.log(categories)
+
   return (
     <>
-      <h1>Jeopardy Game</h1>
-      <div className="text-red-500">Test</div>
+      <div className="border w-full h-full">
+        Test  
+      </div>
     </>
   )
 }
