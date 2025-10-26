@@ -6,13 +6,30 @@ import categories from './data/items.json'
 
 function App() {
   // Add react-card-flip library for flipping cards
-  
-  console.log(categories)
+  const categoryNames = Object.keys(categories);
+  const points = Object.keys(categories[categoryNames[0]])
+  console.log(categories);
 
   return (
     <>
       <div className="border w-full h-full">
-        Test  
+	<table className="w-full h-full">
+	  <thead>
+	    <tr>
+	      {categoryNames.map((category, idx)=>(
+		<th key={idx} className="border p-4 text-center">
+		  {category}
+		</th>
+	      ))}
+	    </tr>
+	  </thead>
+	  <tbody>
+	    {Object.entries(categories).map(([category, items])=>(
+	      // TODO: loop each row}
+	      <></>
+	    ))}
+	  </tbody>
+	</table>
       </div>
     </>
   )
